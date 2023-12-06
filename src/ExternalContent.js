@@ -18,6 +18,7 @@ const ExternalContent = () => {
           throw new Error('Failed to fetch content');
         }
         const content = await response.text();
+        console.log("content" + content);
         const modifiedContent = modifyContent(content);
 
         setExternalContent(modifiedContent);
